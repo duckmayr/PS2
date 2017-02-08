@@ -27,6 +27,6 @@ write.csv.benfords <- function(x, filename){
                 ifelse("Cho-Gains' d" %in% names(x), x$`Cho-Gains' d`, 'NA'),
                 x$note, sep=',')
   sink(filename) # this opens a connection to filename
-  cat(header, '\n', body, '\n') # this creates the content for filename
+  cat(header, '\n', body, '\n', sep='') # this creates the content for filename
   sink() # this closes the connection to filename
 }
